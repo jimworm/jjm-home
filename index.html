@@ -16,7 +16,7 @@
       width: 100px;
       height: 1.5em;
       color: #000;
-      background: #fff;
+/*      background: #fff;*/
     }
     section {
       scroll-snap-align: start;
@@ -58,35 +58,62 @@
       --opa: 3;
       background-image: url(images/pexels-tim-douglas-6205763.jpg);
     }
+    #attributions:before {
+      --opa: 4;
+      background-image: url(images/pexels-yente-van-eynde-1263034-2403392.jpg);
+    }
     
     section div.stage {
       display: table-cell;
       vertical-align: middle;
-      position: absolute;
-      box-sizing: border-box;
-      top: 50%;
-      left: 50%;
-      height: 50%;
-      padding: 15px 30px 15px 175px;
-      min-width: 50vw;
-      transform: translateX(-50%) translateY(-50%);
-      background-color: #fff;
-      border-radius: 30px;
       overflow-y: auto;
-      backdrop-filter: blur(5px);
+      background-color: #fff;
+      box-sizing: border-box;
+    }
+    
+    @media (min-width: 1000px) {
+      section div.stage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 50%;
+        padding: 15px 30px 15px 175px;
+        min-width: 50vw;
+        transform: translateX(-50%) translateY(-50%);
+        border-radius: 30px;
+      }
+
+      img.icon {
+        position: absolute;
+        top: 40px;
+        left: -120px;
+      }
+    }
+    
+    @media (max-width: 999px) { /* narrower than 1000px */
+      section div.stage {
+        position: relative;
+        padding: 15px 30px;
+        margin: 30px auto;
+        border-radius: 10px;
+      }
+      
+      img.icon {
+        display: block;
+        float: right;
+        margin: 0 0 1em 2em;
+      }
     }
     
     div.content {
       position: relative;
     }
-    img.icon {
-      position: absolute;
-      top: 40px;
-      left: -120px;
-    }
-    
     section h1 {
       color: #67c;
+    }
+    
+    #attributions .content {
+      font-size: 0.5em;
     }
   </style>
   
@@ -110,9 +137,19 @@
   <div class="stage">
     <div class="content">
       <h1>Jim's Jams and Marmalades</h1>
-      <p>We are an operations and data consultancy for hospitality businesses, helping owners, managers, and head chefs achieve operational efficiency by integrating tools into an accurate and efficient workflow.</p>
 
       <img src="images/jam-jar.png" class="icon" alt="Jam jar with cute face" />
+      <p>We are an operations and data consultancy for hospitality businesses, helping owners, managers, and head chefs achieve operational efficiency by integrating tools into an accurate and efficient workflow.</p>
+      <p>If you find yourself problems like these:</p>
+      <ul>
+        <li>Entering the same data multiple times</li>
+        <li>Constantly copying information from one app into another</li>
+        <li>Wasting paper when a web form will do</li>
+        <li>Poking around a spreadsheet over and over</li>
+        <li>Fixing errors from manual data handling mistakes</li>
+        <li>Thinking "if only there was an app for this"</li>
+      </ul>
+      <p>We can help you eliminate the pain points in your business.</p>
     </div>
   </div>
 </section>
@@ -123,6 +160,7 @@
     <div class="content">
     <h1>Data fusion for hospitality</h1>
 
+    <img src="images/data-transfer.png" class="icon" alt="Documents being transferred" />
     <p>As a owner or manager you already use a suite of tools to manage your front-of-house and back-of-house operations, covering areas such as:</p>
     <ul>
       <li>Ordering and Inventory</li>
@@ -137,14 +175,13 @@
 </section>
 
 
-
-
 <section id="people">
 
   <div class="stage">
     <div class="content">
     <h1>Our people</h1>
 
+    <img src="images/meeting.png" class="icon" alt="People in a meeting" />
     <p>Pete is a software developer and business analyst with over 15 years of experience. His work integrating various business and financial software has been deployed to many customers including EADS, BAE systems, Virtuozzo, and hundreds of cloud datacentre operators across the world.</p>
 
     <p>Paweł is a chef and entrepreneur who has managed many kitchens and hospitality businesses over 10 years, with in-depth and intimate understanding across all areas of hospitality, from staff management and financial record-keeping to managing safety documentation and recipe development.</p>
@@ -157,8 +194,38 @@
 
     <div class="content">
     <h1>Contact</h1>
+
+    <img src="images/contact-information.png" class="icon" alt="Contact information" />
     <p>Email: <a href="mailto:sales@jimsjamsmarmalades.com">sales@jimsjamsmarmalades.com</a></p>
     <p>Phone: <a href="tel:+447482396378">+44 7482 396378</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="attributions">
+  <div class="stage">
+
+    <div class="content">
+      <h1>Image attribution links</h1>
+
+      <img src="images/pictures.png" class="icon" alt="Pictures" />
+      <p>Background</p>
+      <ul>
+        <li><a href="https://www.pexels.com/photo/man-and-woman-wearing-black-and-white-striped-aprons-cooking-2696064/">Photo by Elle Hughes from Pexels</a></li>
+        <li><a href="https://www.pexels.com/photo/happy-diverse-colleagues-working-on-laptop-4350084/">Photo by Ketut Subiyanto from Pexels</a></li>
+        <li><a href="https://www.pexels.com/photo/positive-bartender-preparing-cocktail-in-pub-3769144/">Photo by Andrea Piacquadio from Pexels</a></li>
+        <li><a href="https://www.pexels.com/photo/serious-colleagues-sitting-at-table-with-gadgets-in-cafe-6205763/">Photo by Tim Douglas from Pexels</a></li>
+        <li><a href="https://www.pexels.com/photo/person-holding-bowl-2403392/">Photo by Yente Van Eynde from Pexels</a></li>
+      </ul>
+      
+      <p>Icons</p>
+      <ul>
+        <li><a href="https://www.flaticon.com/free-icons/jam-jar" title="jam jar icons">Jam jar icons created by Umeicon - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/data-transfer" title="data transfer icons">Data transfer icons created by Good Ware - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/group" title="group icons">Group icons created by Freepik - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/contact-us" title="contact us icons">Contact us icons created by Uniconlabs - Flaticon</a></li>
+        <li><a href="https://www.flaticon.com/free-icons/picture" title="picture icons">Picture icons created by Freepik - Flaticon</a></li>
+      </ul>
     </div>
   </div>
 </section>
