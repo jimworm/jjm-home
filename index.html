@@ -41,6 +41,8 @@
       background-repeat: no-repeat;
       filter: saturate(calc(var(--sat, 1))) blur(3px);
       opacity: clamp(0, calc(1 - (var(--opa) - var(--scroll, 0))), 1);
+/*      1 - clamp(0, max(var(--opa) - var(--scroll, 0)), (var(--scroll, 0), var(--opa)), 1);*/
+/*      opacity: calc(1 - clamp(0, max(var(--opa) - var(--scroll, 0)), (var(--scroll, 0), var(--opa)), 1));*/
     }
     #about:before       { 
       --opa: 0;
